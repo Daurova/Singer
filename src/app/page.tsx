@@ -33,7 +33,7 @@ export default function Home() {
         <div className="relative pt-8 pb-6 text-center">
           <div className="inline-block">
             <div className="text-5xl font-bold tracking-[0.3em] mb-2">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400">LA LA LAND</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400">БОРИС ДЖАГАЕВ</span>
             </div>
             <div className="text-sm text-gray-400 tracking-[0.5em] uppercase font-light">
               A Damien Chazelle Picture
@@ -293,7 +293,7 @@ export default function Home() {
             <div className="relative">
               <div className="text-4xl font-bold tracking-[0.2em] mb-4">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
-                  LA LA LAND
+                  БОРИС ДЖАГАЕВ
                 </span>
               </div>
               
