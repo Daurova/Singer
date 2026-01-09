@@ -4,15 +4,15 @@ const videos = [
   { 
     id: 1, 
     src: "/videos/video1.mp4", 
-    title: "City of Stars",
-    scene: "Seb playing piano at the pier",
+    title: "FOLK",
+    scene: "НАЗВАНИЕ ПЕСНИ",
     color: "from-blue-500 to-purple-600"
   },
   { 
     id: 2, 
     src: "/videos/video2.mp4", 
-    title: "Another Day of Sun",
-    scene: "Freeway dance sequence",
+    title: "JAZZ",
+    scene: "HELLO DARLING",
     color: "from-yellow-500 to-orange-600"
   },
 ];
@@ -22,14 +22,14 @@ export default function Home() {
     <div className="h-full min-h-0 overflow-hidden flex bg-gradient-to-br from-indigo-950 via-purple-950 to-gray-900">
       {/* Левая часть с видео - Лиф-апартаменты Мии и Себа */}
       <div className="w-3/5 h-full overflow-y-auto hide-scrollbar bg-gradient-to-b from-gray-900/30 via-purple-950/20 to-indigo-950/30 backdrop-blur-sm relative">
-        {/* Текстура киноэкрана */}
+        {/* Текстура киноэкрана
         <div className="absolute inset-0 bg-[url('/images/film-grain.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
         
         {/* Эффект неба Лос-Анджелеса на закате */}
         <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-orange-500/10 via-pink-500/5 to-transparent blur-2xl"></div>
         <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-indigo-500/10 via-purple-500/5 to-transparent blur-2xl"></div>
         
-        {/* Заголовок в стиле открывающих титров */}
+        {/* Заголовок в стиле открывающих титров
         <div className="relative pt-8 pb-6 text-center">
           <div className="inline-block">
             <div className="text-5xl font-bold tracking-[0.3em] mb-2">
@@ -39,7 +39,7 @@ export default function Home() {
               A Damien Chazelle Picture
             </div>
           </div>
-        </div>
+        </div>  */}
 
         <div className="grid grid-cols-2 gap-8 p-8">
           {videos.map((video) => (
@@ -314,30 +314,30 @@ export default function Home() {
         </div>
         
         {/* Анимированные элементы внизу */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-8">
+        {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-8"> */}
           {/* Автомобиль (символ пробок на фривее) */}
-          <div className="text-xl animate-bounce" style={{animationDelay: "0s"}}>🚗</div>
+          {/* <div className="text-xl animate-bounce" style={{animationDelay: "0s"}}>🚗</div> */}
           {/* Стул кастинга */}
-          <div className="text-xl animate-bounce" style={{animationDelay: "0.2s"}}>💺</div>
+          {/* <div className="text-xl animate-bounce" style={{animationDelay: "0.2s"}}>💺</div> */}
           {/* Сценарий */}
-          <div className="text-xl animate-bounce" style={{animationDelay: "0.4s"}}>📝</div>
+          {/* <div className="text-xl animate-bounce" style={{animationDelay: "0.4s"}}>📝</div> */}
           {/* Фотоаппарат */}
-          <div className="text-xl animate-bounce" style={{animationDelay: "0.6s"}}>🎥</div>
+          {/* <div className="text-xl animate-bounce" style={{animationDelay: "0.6s"}}>🎥</div> */}
           {/* Оскар */}
-          <div className="text-xl animate-bounce" style={{animationDelay: "0.8s"}}>🏆</div>
-        </div>
+          {/* <div className="text-xl animate-bounce" style={{animationDelay: "0.8s"}}>🏆</div> */}
+        {/* </div> */}
         
         {/* Год и награды */}
-        <div className="absolute top-12 left-12">
+        {/* <div className="absolute top-12 left-12">
           <div className="text-yellow-500/50 text-lg font-mono">2016</div>
           <div className="text-xs text-gray-500 mt-1">6 Academy Awards</div>
-        </div>
+        </div> */}
         
         {/* Композитор */}
-        <div className="absolute top-12 right-12 text-right">
+        {/* <div className="absolute top-12 right-12 text-right">
           <div className="text-cyan-500/70 text-sm">Justin Hurwitz</div>
           <div className="text-xs text-gray-500 mt-1">Composer</div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
