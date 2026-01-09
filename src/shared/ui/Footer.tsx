@@ -24,6 +24,7 @@ export function Footer() {
       {/* Декоративные элементы */}
       <div className="absolute left-4 bottom-4 text-yellow-300/20 text-xs">♪</div>
       <div className="absolute right-4 bottom-4 text-pink-300/20 text-xs">♫</div>
+      
     </footer>
   );
 }

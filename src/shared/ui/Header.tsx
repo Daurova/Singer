@@ -35,23 +35,32 @@ export function Header() {
             <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 group-hover:animate-slide transition-opacity duration-300"></div>
           </div>
           
-          <div className="relative p-3 rounded-lg">
-            <div className="text-3xl font-bold tracking-[0.15em] mb-1 transform transition-all duration-500 group-hover:scale-105 group-hover:tracking-[0.2em]">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 group-hover:from-yellow-300 group-hover:via-pink-300 group-hover:to-purple-300 transition-all duration-700">
-                БОРИС ДЖАГАЕВ
-              </span>
-            </div>
-            
-            {/* Подзаголовок */}
-            <div className="relative">
-              <div className="text-xs text-gray-300 tracking-[0.3em] uppercase font-light transition-all duration-500 group-hover:text-yellow-200 group-hover:tracking-[0.4em]">
-                The one who dreams
-              </div>
-              
-              {/* Декоративная линия - расширяется при наведении */}
-              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent transition-all duration-700 group-hover:w-32 group-hover:via-yellow-300 group-hover:h-0.5"></div>
-            </div>
-          </div>
+          {/* Текст вывески - белый неон с голубоватым свечением */}
+    <div className="text-2xl md:text-3xl font-black tracking-[0.15em] mb-2 transform transition-all duration-500 group-hover:scale-105 group-hover:tracking-[0.18em]">
+      <span className="relative">
+        {/* Белое свечение текста */}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-50 to-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] transition-all duration-700">
+          БОРИС ДЖАГАЕВ
+        </span>
+        
+        {/* Голубое подстветка для глубины */}
+        <span className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-r from-cyan-300/40 via-blue-300/30 to-cyan-300/40 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+          БОРИС ДЖАГАЕВ
+        </span>
+      </span>
+    </div>
+    
+    {/* Подзаголовок - меньший неон */}
+    <div className="relative">
+      <div className="text-[10px] md:text-xs text-cyan-100/80 tracking-[0.3em] uppercase font-mono font-bold transition-all duration-500 group-hover:text-cyan-50 group-hover:tracking-[0.35em]">
+        <span className="drop-shadow-[0_0_3px_rgba(173,216,230,0.5)]">
+          The ripples from pebbles
+        </span>
+      </div>
+      
+      {/* Нижняя неоновая трубка */}
+      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-60 group-hover:opacity-90 group-hover:w-28 group-hover:h-0.5 group-hover:via-white/70 transition-all duration-500"></div>
+    </div>
           
           {/* Парящие музыкальные символы - становятся активными при наведении */}
           <div className="absolute -top-1 -left-1 text-sm text-yellow-300/40 animate-pulse group-hover:text-yellow-300 group-hover:opacity-100 group-hover:scale-125 group-hover:animate-spin" style={{animationDelay: "0.2s"}}>
@@ -67,10 +76,10 @@ export function Header() {
             ♫
           </div>
           
-          {/* Пианино слева от заголовка - оживает при наведении */}
+          {/* Пианино слева от заголовка - оживает при наведении
           <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 opacity-20 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500">
             <div className="text-xl animate-spin-slow group-hover:animate-none group-hover:rotate-12 transition-all duration-500">🎹</div>
-          </div>
+          </div> */}
           
           {/* Эффект звуковых волн при наведении */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
@@ -110,18 +119,17 @@ export function Header() {
                 {/* Эффект свечения при наведении */}
                 <div className={`absolute -inset-1 bg-gradient-to-r ${item.color} rounded-lg blur-sm opacity-0 group-hover/link:opacity-70 transition-all duration-300`}></div>
                 
-                {/* Контейнер ссылки */}
-                <div className="relative flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-sm border border-purple-500/20 group-hover/link:border-yellow-500/40 transition-all duration-300 group-hover/link:scale-105 group-hover/link:shadow-[0_0_10px_rgba(168,85,247,0.3)]">
-                  {/* Иконка */}
-                  <span className="text-xs opacity-70 group-hover/link:opacity-100 group-hover/link:animate-bounce" style={{animationDuration: '0.5s'}}>
+               {/* Контейнер ссылки - увеличенный */}
+                <div className="relative flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-sm border border-purple-500/20 group-hover/link:border-yellow-500/40 transition-all duration-300 group-hover/link:scale-105 group-hover/link:shadow-[0_0_15px_rgba(168,85,247,0.4)] min-w-[100px]">
+                  {/* Иконка - увеличенная */}
+                  {/* <span className="text-base opacity-70 group-hover/link:opacity-100 group-hover/link:animate-bounce" style={{animationDuration: '0.5s'}}>
                     {item.icon}
-                  </span>
+                  </span> */}
                   
-                  {/* Текст */}
-                  <span className="text-white/90 text-xs font-light tracking-wider group-hover/link:text-white group-hover/link:font-medium transition-all duration-300">
+                  {/* Текст - увеличенный */}
+                  <span className="text-white/90 text-sm font-medium tracking-wider group-hover/link:text-white group-hover/link:font-bold transition-all duration-300 whitespace-nowrap">
                     {item.label}
                   </span>
-                  
                   {/* Подчеркивание при наведении */}
                   <div className="absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-yellow-500 to-pink-500 group-hover/link:w-3/4 transition-all duration-300"></div>
                 </div>
@@ -138,11 +146,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Год в левом нижнем углу */}
-        <div className="absolute left-6 bottom-2">
-          <div className="text-yellow-500/30 font-mono text-xs tracking-widest">2024</div>
-        </div>
-        
+       
         {/* Музыкальная нота в правом нижнем углу */}
         <div className="absolute right-6 bottom-2">
           <div className="text-pink-500/30 text-xs animate-pulse" style={{animationDuration: '2s'}}>♪</div>
