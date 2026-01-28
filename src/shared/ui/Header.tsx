@@ -264,12 +264,12 @@ export function Header() {
           <div 
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full animate-twinkle"
-            style={{
-              left: `${10 + Math.random() * 80}%`,
-              top: `${20 + Math.random() * 60}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              opacity: 0.3
-            }}
+            // style={{
+            //   left: `${10 + Math.random() * 80}%`,
+            //   top: `${20 + Math.random() * 60}%`,
+            //   animationDelay: `${Math.random() * 5}s`,
+            //   opacity: 0.3
+            // }}
           ></div>
         ))}
       </div>
