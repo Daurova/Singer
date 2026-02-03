@@ -20,6 +20,15 @@ const videos = [
     letters: "ЛА",
     color: "from-yellow-500 to-orange-600"
   },
+    { 
+    id: 3, 
+    src: "/videos/video3.mp4", 
+    title: "Rock'n'roll",
+    scene: "TUTTI FRUTTI",
+    origin: "Литтл Ричард",
+    letters: "ЛР",
+    color: "from-yellow-500 to-orange-600"
+  },
 ];
 
 export default function Home() {

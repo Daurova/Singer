@@ -13,22 +13,6 @@ const dailyRoutine = [
     image: "/daily/morning.jpg"
   },
   {
-    time: "08:30",
-    title: "ВОКАЛЬНЫЕ РАЗМИНКИ",
-    description: "Ежедневные упражнения для поддержания голоса в идеальной форме",
-    icon: Music,
-    color: "from-pink-500 to-rose-600",
-    image: "/daily/vocal.jpg"
-  },
-  {
-    time: "10:00",
-    title: "РЕПЕТИЦИИ",
-    description: "Работа над новыми аранжировками и репетиция предстоящих выступлений",
-    icon: Book,
-    color: "from-purple-500 to-indigo-600",
-    image: "/daily/rehearsal.jpg"
-  },
-  {
     time: "13:00",
     title: "ТВОРЧЕСКИЙ ОБЕД",
     description: "Встречи с коллегами, обсуждение новых проектов и вдохновляющие беседы",
@@ -42,7 +26,8 @@ const dailyRoutine = [
     description: "Запись новых треков, работа над звуком и аранжировками",
     icon: Pen,
     color: "from-green-500 to-emerald-600",
-    image: "/daily/studio.jpg"
+    image: "/daily/studio.jpg",
+    videos: '/videos/videoStudio1.mp4'
   },
   {
     time: "18:00",
@@ -51,14 +36,6 @@ const dailyRoutine = [
     icon: Dumbbell,
     color: "from-red-500 to-orange-600",
     image: "/daily/gym.jpg"
-  },
-  {
-    time: "20:00",
-    title: "ВЫСТУПЛЕНИЯ",
-    description: "Корпоративные мероприятия, концерты и живые выступления",
-    icon: Star,
-    color: "from-yellow-500 to-amber-600",
-    image: "/daily/performance.jpg"
   },
   {
     time: "23:00",
@@ -202,7 +179,7 @@ export default function DailyLifePage() {
                 <div className="w-1 h-1 rounded-full bg-gray-600"></div>
                 <div className="flex items-center space-x-2 text-sm text-gray-400">
                   <Home className="w-4 h-4" />
-                  <span>Москва → Мир</span>
+                  <span>Владикавказ → Мир</span>
                 </div>
               </div>
             </div>
@@ -214,7 +191,7 @@ export default function DailyLifePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Левая колонка - утро и день */}
             <div className="space-y-6">
-              {dailyRoutine.slice(0, 4).map((item) => (
+              {dailyRoutine.slice(0, 2).map((item) => (
                 <div 
                   key={item.time}
                   onMouseEnter={() => setActiveTime(item.time)}
@@ -245,7 +222,8 @@ export default function DailyLifePage() {
                         <div className="h-32 rounded-lg overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 border border-white/10">
                           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-pink-900/20 flex items-center justify-center">
                             <div className="text-gray-400 text-sm">
-                              Фото: {item.title.toLowerCase()}
+                           {item.videos ? <video src={item.videos} controls></video> : <span> Фото: {item.title.toLowerCase()}</span>}
+
                             </div>
                           </div>
                         </div>
@@ -258,7 +236,7 @@ export default function DailyLifePage() {
 
             {/* Правая колонка - вечер и ночь */}
             <div className="space-y-6">
-              {dailyRoutine.slice(4).map((item) => (
+              {dailyRoutine.slice(2).map((item) => (
                 <div 
                   key={item.time}
                   onMouseEnter={() => setActiveTime(item.time)}
@@ -289,7 +267,7 @@ export default function DailyLifePage() {
                         <div className="h-32 rounded-lg overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 border border-white/10">
                           <div className="w-full h-full bg-gradient-to-br from-blue-900/20 to-cyan-900/20 flex items-center justify-center">
                             <div className="text-gray-400 text-sm">
-                              Фото: {item.title.toLowerCase()}
+                           {item.videos ? <video src={item.videos} controls></video> : <span> Фото: {item.title.toLowerCase()}</span>}
                             </div>
                           </div>
                         </div>
